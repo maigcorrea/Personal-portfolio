@@ -42,9 +42,11 @@ const NavBar = () => {
         }
     }, [location.pathname])
 
+    
+
   return (
     <>
-        <div ref={containerRef} className='relative flex justify-around items-center'>
+        <div ref={containerRef} className='relative flex justify-around items-center z-3'>
             <motion.div
                 className="absolute h-[50px] px-[40px] bg-gray-500 rounded-full"
                 animate={{
