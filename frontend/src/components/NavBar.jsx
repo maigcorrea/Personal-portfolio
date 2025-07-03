@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-
+import { useTriggerPageTransition } from './PageTransitionWrapper'
 // 📝 Nota futura:
 // Este menú usa rutas exactas ("/", "/work", "/about").
 // Si en el futuro se agregan rutas dinámicas como "/user/:id" o "/project/:projectId":
@@ -11,11 +11,15 @@ import { motion } from 'framer-motion'
 //   3. Alternativa escalable: usar un array navItems[] con path y ref para hacer coincidencia dinámica.
 const NavBar = () => {
     const location = useLocation()
+    const navigate = useNavigate();
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 })
     const containerRef = useRef(null)
     const homeRef = useRef(null)
     const workRef = useRef(null)
     const aboutRef = useRef(null)
+
+
+    const triggerPageTransition = useTriggerPageTransition();
 
     useEffect(() => {
         const map = {
@@ -42,7 +46,18 @@ const NavBar = () => {
         }
     }, [location.pathname])
 
-    
+
+    const handleNavigation = (path) => (e) => {
+         e.preventDefault();
+        if (path === location.pathname) return;
+
+        triggerPageTransition();
+
+        // Espera un poco antes de navegar para que se vea la animación
+        setTimeout(() => {
+        navigate(path);
+        }, 1000); // puedes ajustar esto para que coincida con tu animación
+    }
 
   return (
     <>
@@ -55,19 +70,19 @@ const NavBar = () => {
                 }}
                 transition={{
                     type: 'spring',
-                    stiffness: 500,
+                    stiffness: 200,
                     damping: 80,
                 }}
             />
 
             <div ref={workRef} className={`z-1 px-[40px]`}>
-                <Link to={'/work'}>Work</Link>
+                <Link to={'/work'} onClick={handleNavigation("/work")}>Work</Link>
             </div>
             <div ref={homeRef} className={`z-1 px-[40px]`}>
-                <Link to={'/'}>Home</Link>
+                <Link to={'/'} onClick={handleNavigation("/")}>Home</Link>
             </div>
             <div ref={aboutRef} className={`z-1 px-[40px]`}>
-                <Link to={'/about'}>About</Link>
+                <Link to={'/about'} onClick={handleNavigation("/about")}>About</Link>
             </div>
         </div>
     </>
