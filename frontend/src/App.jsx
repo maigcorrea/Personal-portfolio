@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Work from './pages/Work'
 import About from './pages/About'
 import Layout from './layout/Layout'
+import './styles/fonts.css';
 
 function App() {
 
