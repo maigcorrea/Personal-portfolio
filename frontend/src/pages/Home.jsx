@@ -8,13 +8,11 @@ const Home = () => {
   return (
     <>
     <div className="revealer"></div>
-        <div className='bg-blue-200 h-screen'>
+        <div className='bg-red-200 h-screen'>
           <div className=' h-screen w-full relative'>
             <h1 className='text-7xl'>Dando forma a tus ideas</h1>
             <div className='flex justify-center'>
-              <div className='absolute bottom-4 bg-gray-300 text-white p-4 rounded-full shadow-lg z-3'>
-                    <NavBar/>
-                </div>
+              <NavBar/>
             </div>
           </div>
         </div>
