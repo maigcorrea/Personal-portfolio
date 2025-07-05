@@ -8,7 +8,7 @@ const Work = () => {
   return (
     <>
     <div className="revealer"></div>
-      <div className='bg-purple-200 h-screen'>
+      <div className='bg-purple-200 h-dvh'>
             <div className='flex justify-center h-full relative'>
               <NavBar/>
             </div>

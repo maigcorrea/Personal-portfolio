@@ -64,13 +64,13 @@ const NavBar = () => {
 
   return (
     <>
-        <div className='absolute bottom-4 bg-gray-300 text-white p-4 rounded-full shadow-lg z-3'>
+        <div className='absolute bottom-4 bg-gray-300 text-white p-4 rounded-full shadow-lg z-3 mx-4'>
             <div ref={containerRef} className='relative flex justify-around items-center z-3'>
                 {
                     //Indicador burbúja
                 }
                 <motion.div
-                    className="absolute h-[50px] px-[40px] bg-gray-500 rounded-full"
+                    className="absolute h-[50px]  md:px-[40px] bg-gray-500 rounded-full"
                     animate={{
                         left: indicatorStyle.left,
                         width: indicatorStyle.width,
@@ -82,13 +82,13 @@ const NavBar = () => {
                     }}
                 />
 
-                <div ref={workRef} className={`z-1 px-[40px]`}>
+                <div ref={workRef} className={`z-1 px-[20px] md:px-[40px]`}>
                     <Link to={'/work'} onClick={handleNavigation("/work")}>Work</Link>
                 </div>
-                <div ref={homeRef} className={`z-1 px-[40px]`}>
+                <div ref={homeRef} className={`z-1 px-[20px] md:px-[40px]`}>
                     <Link to={'/'} onClick={handleNavigation("/")}>Home</Link>
                 </div>
-                <div ref={aboutRef} className={`z-1 px-[40px]`}>
+                <div ref={aboutRef} className={`z-1 px-[20px] md:px-[40px]`}>
                     <Link to={'/about'} onClick={handleNavigation("/about")}>About</Link>
                 </div>
             </div>
