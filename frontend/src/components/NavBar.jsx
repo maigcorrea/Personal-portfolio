@@ -9,6 +9,7 @@ import { useTriggerPageTransition } from './PageTransitionWrapper'
 //   1. Usar location.pathname.startsWith('/user') para mapearlas.
 //   2. O simplemente ocultar el indicador si la ruta no está en el menú.
 //   3. Alternativa escalable: usar un array navItems[] con path y ref para hacer coincidencia dinámica.
+
 const NavBar = () => {
     const location = useLocation()
     const navigate = useNavigate();
@@ -21,6 +22,7 @@ const NavBar = () => {
 
     const triggerPageTransition = useTriggerPageTransition();
 
+    // Efecto de desplazamiento del idicador (motion.div) en el menú al cambiar de ruta
     useEffect(() => {
         const map = {
             '/': homeRef,
@@ -47,6 +49,7 @@ const NavBar = () => {
     }, [location.pathname])
 
 
+    // Maneja la navegación y la animación de transición entre páginas (animación cúbica de PageTransitionWrapper.jsx)
     const handleNavigation = (path) => (e) => {
          e.preventDefault();
         if (path === location.pathname) return;
@@ -62,6 +65,9 @@ const NavBar = () => {
   return (
     <>
         <div ref={containerRef} className='relative flex justify-around items-center z-3'>
+            {
+                //Indicador burbúja
+            }
             <motion.div
                 className="absolute h-[50px] px-[40px] bg-gray-500 rounded-full"
                 animate={{
