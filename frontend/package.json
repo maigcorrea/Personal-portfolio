@@ -6,7 +6,7 @@
   "homepage": "https://maigcorrea.github.io/Personal-portfolio/",
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run build", 
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",

@@ -64,13 +64,13 @@ const NavBar = () => {
 
   return (
     <>
-        <div className='absolute bottom-4 bg-gray-300 text-white p-4 rounded-full shadow-lg z-3 mx-4'>
+        <div className='absolute bottom-4 bg-[#c4c7c5] text-black p-4 rounded-full shadow-lg z-3 mx-4'>
             <div ref={containerRef} className='relative flex justify-around items-center z-3'>
                 {
                     //Indicador burbúja
                 }
                 <motion.div
-                    className="absolute h-[50px]  md:px-[40px] bg-gray-500 rounded-full"
+                    className="absolute h-[50px]  md:px-[40px] bg-[#f5f5f5] rounded-full"
                     animate={{
                         left: indicatorStyle.left,
                         width: indicatorStyle.width,

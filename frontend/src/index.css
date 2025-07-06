@@ -1,1 +1,18 @@
+@font-face {
+  font-family: 'HelveticaNow';
+  src: url('../src/assets/fonts/helveticanow.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMonoLight';
+    src: url('../src/assets/fonts/RobotoMono-Light.ttf') format('truetype');
+}
+
 @import "tailwindcss";
+
+@theme{
+    --font-family-helvetica: 'HelveticaNow', sans-serif;
+    --font-family-robotoMonoLight: 'RobotoMonoLight', monospace;
+}
