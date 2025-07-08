@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import NavBar from '../components/NavBar'
+import CustomCursor from '../components/CustomCursor'
 import './globals.css';
 import { useRevealer } from '../hooks/useRevealer';
 import { initializeWorkSlider } from '../hooks/works';
@@ -13,6 +14,7 @@ const Work = () => {
   
   return (
     <>
+    <CustomCursor />
     <div className="revealer"></div>
       {/*<div className='bg-purple-200 h-dvh'>
             <div className='flex justify-center h-full relative'>
