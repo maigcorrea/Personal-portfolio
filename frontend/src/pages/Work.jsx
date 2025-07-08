@@ -20,7 +20,7 @@ const Work = () => {
             </div>
         </div>*/}
 
-
+        
 
         <footer>
           <p>All proyects</p>
