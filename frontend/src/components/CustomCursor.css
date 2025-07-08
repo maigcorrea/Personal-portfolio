@@ -24,6 +24,6 @@
   mix-blend-mode: difference;
 }
 
-body, *:hover {
+/* body, *:hover {
   cursor: none !important;
-}
+} */

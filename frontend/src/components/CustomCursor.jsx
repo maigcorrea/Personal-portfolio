@@ -1,9 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import "./CustomCursor.css";
+import { useLocation } from "react-router-dom";
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
+  const location = useLocation();
 
+
+  
   useEffect(() => {
     const moveCursor = (e) => {
       if (cursorRef.current) {

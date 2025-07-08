@@ -10,6 +10,10 @@ const Work = () => {
 
   useEffect(() => {
     initializeWorkSlider();
+
+    // Al montar la página le añadimos al body una clase para identificarla, y así saber si mostrar el cursor (la flechita) o no, ya que esta página tiene un cursor personalizado
+    document.body.classList.add('work-page');
+    return () => document.body.classList.remove('work-page');
   }, []);
   
   return (
@@ -22,7 +26,11 @@ const Work = () => {
             </div>
         </div>*/}
 
+      <div className='h-dvh'>
         
+        <div className='m-auto w-full flex justify-center '>
+          <NavBar className=""/>
+        </div>
 
         <footer>
           <p>All proyects</p>
@@ -34,10 +42,10 @@ const Work = () => {
         </footer>
 
 
-        <div className="slider">
-          <div className="slide">
+        <div className="slider blur-sm">
+          <div className="slide" >
             <div className="slide-bg-img">
-              <img src="assets/work/img1.png" alt=""/>
+              <img src="assets/work/img1.png"  alt=""/>
             </div>
           </div>
         </div>
@@ -51,12 +59,14 @@ const Work = () => {
 
         <div className="slide-copy">
           <div className="slide-title">
-            <h1>Field Unit</h1>
+            <h1>Web de Goiko</h1>
           </div>
           <div className="slide-description">
-            <p>Concept art</p>
+            <p>Frontend</p>
           </div>
         </div>
+
+        </div> 
     </>
   )
 }

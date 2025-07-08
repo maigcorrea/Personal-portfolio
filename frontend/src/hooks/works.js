@@ -14,12 +14,12 @@ let touchStartY = 0;
 let isTouchActive = false;
 
 const slideTitles = [
-  "Field Unit1", "Field Unit2", "Field Unit3", "Field Unit4",
+  "Web de Goiko", "Field Unit2", "Field Unit3", "Field Unit4",
   "Field Unit5", "Field Unit6", "Field Unit7"
 ];
 
 const slideDescriptions = [
-  "Concept art1", "Concept art2", "Concept art3", "Concept art4",
+  "Frontend", "Concept art2", "Concept art3", "Concept art4",
   "Concept art5", "Concept art6", "Concept art7"
 ];
 
