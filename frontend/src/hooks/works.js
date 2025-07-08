@@ -35,7 +35,7 @@ export function initializeWorkSlider() {
     slideBgImg.className = 'slide-bg-img';
 
     const img = document.createElement('img');
-    img.src = `assets/work/img${slideNumber}.jpg`; // ruta corregida
+    img.src = `assets/work/img${slideNumber}.png`; 
     img.alt = `Slide ${slideNumber}`;
 
     slideBgImg.appendChild(img);
@@ -54,7 +54,7 @@ export function initializeWorkSlider() {
     wrapper.className = 'slide-main-img-wrapper';
 
     const img = document.createElement('img');
-    img.src = `assets/work/img${slideNumber}.jpg`; // ruta corregida
+    img.src = `assets/work/img${slideNumber}.png`; 
     img.alt = `Slide ${slideNumber}`;
 
     wrapper.appendChild(img);

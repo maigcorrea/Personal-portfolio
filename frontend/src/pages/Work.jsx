@@ -37,7 +37,7 @@ const Work = () => {
         <div className="slider">
           <div className="slide">
             <div className="slide-bg-img">
-              <img src="assets/work/img1.jpg" alt=""/>
+              <img src="assets/work/img1.png" alt=""/>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ const Work = () => {
 
         <div className="slide-main-img">
           <div className="slide-main-img-wrapper">
-            <img src="assets/work/img1.jpg" alt="" />
+            <img src="assets/work/img1.png" alt="" />
           </div>
         </div>
 
