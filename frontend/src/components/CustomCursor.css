@@ -27,3 +27,11 @@
 /* body, *:hover {
   cursor: none !important;
 } */
+
+/* DISPOSITIVOS TÁCTILES Y SIN HOVER */
+/* Oculta el cursor personalizado en dispositivos táctiles o donde no se pueda hacer hover */
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
