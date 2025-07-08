@@ -35,3 +35,10 @@
     display: none !important;
   }
 }
+
+/* Forzar ocultar en dispositivos móviles */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none !important;
+  }
+}

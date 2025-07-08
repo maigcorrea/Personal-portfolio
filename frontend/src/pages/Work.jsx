@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from '../components/NavBar'
 import CustomCursor from '../components/CustomCursor'
 import './globals.css';
@@ -7,6 +7,20 @@ import { initializeWorkSlider } from '../hooks/works';
 
 const Work = () => {
   useRevealer();
+
+  // Estado para detectar si es móvil
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Efecto para detectar el tamaño de la pantalla desde react y ajustar el estado isMobile con el fin de evitar el renderizado del cursor en móviles
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     initializeWorkSlider();
@@ -18,7 +32,7 @@ const Work = () => {
   
   return (
     <>
-    <CustomCursor />
+    {!isMobile && <CustomCursor />}
     <div className="revealer"></div>
       {/*<div className='bg-purple-200 h-dvh'>
             <div className='flex justify-center h-full relative'>
