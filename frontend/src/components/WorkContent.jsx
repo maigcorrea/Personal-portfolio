@@ -117,7 +117,7 @@ const WorkContent = () => {
         </footer>
 
 
-        <div className="slider blur-sm">
+        <div className="slider">
           <div className="slide" >
             <div className="slide-bg-img">
               <img src="assets/work/img1.png"  alt=""/>

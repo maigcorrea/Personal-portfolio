@@ -101,6 +101,7 @@ footer p{
     height: 100%;
     display: block;
     background-color: rgba(0, 0, 0, 0.125);
+    backdrop-filter: blur(10px);
 }
 
 .slide-main-img{
