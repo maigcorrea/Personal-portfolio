@@ -2,8 +2,8 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   pointer-events: none;
   border: 10px solid white;
   border-radius: 50%;
@@ -24,9 +24,15 @@
   mix-blend-mode: difference;
 }
 
-/* body, *:hover {
-  cursor: none !important;
-} */
+/* Estilos para cuendo el cursor haga hover sobre la imagen de un proyecto y se agrande */
+.custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Estilos para el cursor cuando se hace hover sobre el navBar */
+.custom-cursor.small {
+  transform: translate(-50%, -50%) scale(0.4); /* reduce el tamaño */
+}
 
 /* DISPOSITIVOS TÁCTILES Y SIN HOVER */
 /* Oculta el cursor personalizado en dispositivos táctiles o donde no se pueda hacer hover */

@@ -23,6 +23,8 @@ const slideDescriptions = [
   "Concept art5", "Concept art6", "Concept art7"
 ];
 
+const slideUrls = ["#1", "#2", "#", "#", "#", "#", "#"]
+
 export function initializeWorkSlider() {
   if (listenersInitialized) return;
   listenersInitialized = true;
@@ -53,12 +55,20 @@ export function initializeWorkSlider() {
     const wrapper = document.createElement('div');
     wrapper.className = 'slide-main-img-wrapper';
 
+     // Crea el <a> y le asigna la URL del array
+    const link = document.createElement('a');
+    link.href = slideUrls[slideNumber - 1]; 
+    link.className = 'cursor-none'; // mantener oculto el cursor nativo
+    link.target = '_blank'; // abrir en nueva pestaña
+
     const img = document.createElement('img');
     img.src = `assets/work/img${slideNumber}.png`; 
     img.alt = `Slide ${slideNumber}`;
 
-    wrapper.appendChild(img);
+    link.appendChild(img);
+    wrapper.appendChild(link);
 
+    // Clip path inicial para animación
     wrapper.style.clipPath =
       direction === "down"
         ? "polygon(0 0%, 100% 0%, 100% 0%, 0 0%)"

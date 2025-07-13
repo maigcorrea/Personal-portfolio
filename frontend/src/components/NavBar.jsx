@@ -10,7 +10,7 @@ import { useTriggerPageTransition } from './PageTransitionWrapper'
 //   2. O simplemente ocultar el indicador si la ruta no está en el menú.
 //   3. Alternativa escalable: usar un array navItems[] con path y ref para hacer coincidencia dinámica.
 
-const NavBar = () => {
+const NavBar = ({className = ''}) => {
     const location = useLocation()
     const navigate = useNavigate();
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 })
@@ -64,7 +64,7 @@ const NavBar = () => {
 
   return (
     <>
-        <div className='absolute bottom-4 bg-[#c4c7c5] text-black p-4 rounded-full shadow-lg z-3 mx-4'>
+        <div className={`absolute bottom-4 bg-[#c4c7c5] text-black p-4 rounded-full shadow-lg z-3 mx-4 ${className}`}>
             <div ref={containerRef} className='relative flex justify-around items-center z-3'>
                 {
                     //Indicador burbúja
