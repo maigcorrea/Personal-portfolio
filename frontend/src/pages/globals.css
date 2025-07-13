@@ -4,7 +4,7 @@
     left: 0;
     width: 100vw;
     height: 100svh;
-    transform-origin:  center top; /* center top originalmente pero experimenta a ver que sale, bottom top chulo y bottom center también (efecto para abajo)*/
+    transform-origin: top center; /* center top originalmente (partiendo desde el centro hacia el top)pero experimenta a ver que sale, bottom top chulo y bottom center también (efecto para abajo)*/
     background-color: pink;
     pointer-events: none;
     z-index: 99;
