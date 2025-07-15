@@ -1,3 +1,4 @@
+//Esto debería estar en la carpeta de hooks
 import { useLocation, useNavigate } from "react-router-dom";
 
 export function useTriggerPageTransition() {
@@ -12,7 +13,7 @@ export function useTriggerPageTransition() {
         },
       ],
       {
-        duration: 2000,
+        duration: 3000, // Ajusta la duración según tu preferencia
         easing: "cubic-bezier(0.9, 0, 0.1, 1)",
       }
     );

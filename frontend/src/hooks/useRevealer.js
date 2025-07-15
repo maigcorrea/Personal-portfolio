@@ -11,7 +11,7 @@ export function useRevealer() {
     useGSAP(() => {
         gsap.to(".revealer", {
             scaleY: 0,
-            duration: 1.25,
+            duration: 0.8,
             delay:1,
             ease: "hop",
         })

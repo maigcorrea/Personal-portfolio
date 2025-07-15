@@ -20,6 +20,18 @@ const NavBar = ({className = ''}) => {
     const aboutRef = useRef(null)
 
 
+    // Animación de recorte sobre todo el documento html, Comienza mostrando una especie de banda horizontal (25% 75%), que parece un rectángulo pequeño o delgado. Luego lo expande visualmente hasta cubrir toda la pantalla con un efecto de “apertura”.
+    // Esto se usa para animar la transición entre páginas.
+    // PROCEDIMIENTO
+    // 1. El usuario navega a una página.
+
+    // 2. Se ejecuta useTriggerPageTransition() (manualmente o desde un efecto).
+
+    // 3. El navegador anima el recorte del <html>, ocultando temporalmente parte de la pantalla.
+
+    // 4. Mientras tanto, el contenido se empieza a montar detrás de esa animación.
+
+    // 5. Luego, cuando ya todo está en pantalla, entra en acción .revealer, que tiene su propia animación en useRevealer.js (como colapsar hacia arriba, por ejemplo).
     const triggerPageTransition = useTriggerPageTransition();
 
     // Efecto de desplazamiento del idicador (motion.div) en el menú al cambiar de ruta

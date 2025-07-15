@@ -5,7 +5,7 @@
     left: 0;
     width: 100vw;
     height: 100svh;
-    transform-origin: top center; /* center top originalmente (partiendo desde el centro hacia el top)pero experimenta a ver que sale, bottom top chulo y bottom center también (efecto para abajo)*/
+    transform-origin: center top; /* center top originalmente (partiendo desde el centro hacia el top)pero experimenta a ver que sale, bottom top chulo y bottom center también (efecto para abajo)*/
     background-color: pink;
     pointer-events: none;
     z-index: 99;
@@ -207,4 +207,46 @@ html, body {
 /* Que el cursor no se vea en la página de Work, en las demás sí */
 body.work-page {
   cursor: none !important;
+}
+
+
+
+/* PRUEBA */
+.home{
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+}
+
+.home .header {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.home .header h1{
+    color: white;
+    font-size: 48px;
+    text-align: center;
+}
+
+.letter, .word, .line {
+    position: relative;
+    display: inline-block;
+    will-change: transform;
+
+}
+
+.revealer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100svh;
+    transform-origin: center top; /* center top originalmente (partiendo desde el centro hacia el top)pero experimenta a ver que sale, bottom top chulo y bottom center también (efecto para abajo)*/
+    background-color: pink;
+    pointer-events: none;
+    z-index: 99;
 }
