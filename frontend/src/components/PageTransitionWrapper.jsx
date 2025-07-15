@@ -1,4 +1,10 @@
 //Esto debería estar en la carpeta de hooks
+
+// Aplica una animación de recorte (clip-path) sobre TODO el documento (<html>).
+
+// Comienza mostrando una especie de banda horizontal (25% 75%), que parece un rectángulo pequeño o delgado.
+
+// Luego lo expande visualmente hasta cubrir toda la pantalla con un efecto de “apertura”.
 import { useLocation, useNavigate } from "react-router-dom";
 
 export function useTriggerPageTransition() {
