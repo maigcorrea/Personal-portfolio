@@ -81,9 +81,9 @@ const Home = () => {
 
         <section className='curved_text'>
           <CurvedLoop 
-            marqueeText="Be ✦ Creative ✦ With ✦ React ✦ Bits ✦"
+            marqueeText="Desarrollo ✦ Creatividad ✦ Innovación ✦ Rendimiento ✦ Potencia ✦"
             speed={3}
-            curveAmount={500}
+            curveAmount={300}
             direction="right"
             interactive={true}
             className="custom-text-style"
