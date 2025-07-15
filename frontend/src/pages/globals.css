@@ -1,3 +1,4 @@
+/*div que se revela cuando cambiamos de página*/
 .revealer{
     position: fixed;
     top: 0;
@@ -8,6 +9,12 @@
     background-color: pink;
     pointer-events: none;
     z-index: 99;
+}
+
+/*A cada página le podemos asignar un color de fondo diferente*/
+/*HOME*/
+body {
+   background-color:#131314;
 }
 
 
@@ -190,7 +197,6 @@ footer p{
 }
 
 html, body {
-  overflow: hidden;
   height: 100%;
   margin: 0;
   padding: 0;

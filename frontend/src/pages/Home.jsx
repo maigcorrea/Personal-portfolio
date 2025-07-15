@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar'
 import './globals.css';
 import { useRevealer } from '../hooks/useRevealer';
 import SplitText from '../hooks/splitRevealerText';
+import CurvedLoop from '../components/CurvedLoop';
 
 const Home = () => {
   useRevealer();
@@ -13,7 +14,11 @@ const Home = () => {
   return (
     <>
     <div className="revealer"></div>
-        <div className='bg-[#131314] h-dvh'>
+
+    <section>
+
+    
+        <div className='h-dvh'>
           <div className=' h-dvh w-full relative text-[#f5f5f5]'>
             <div className='p-[20px] flex flex-col'>
                 
@@ -72,6 +77,18 @@ const Home = () => {
             </div>
           </div>
         </div>
+        </section>
+
+        <section className='curved_text'>
+          <CurvedLoop 
+            marqueeText="Be ✦ Creative ✦ With ✦ React ✦ Bits ✦"
+            speed={3}
+            curveAmount={500}
+            direction="right"
+            interactive={true}
+            className="custom-text-style"
+          />
+        </section>
     </>
   )
 }

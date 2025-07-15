@@ -64,7 +64,7 @@ const NavBar = ({className = ''}) => {
 
   return (
     <>
-        <div className={`absolute bottom-4 bg-[#c4c7c5] text-black p-4 rounded-full shadow-lg z-3 mx-4 ${className}`}>
+        <div className={`fixed bottom-4 bg-[#c4c7c5] text-black p-4 rounded-full shadow-lg z-3 mx-4 ${className}`}>
             <div ref={containerRef} className='relative flex justify-around items-center z-3'>
                 {
                     //Indicador burbúja
@@ -77,8 +77,8 @@ const NavBar = ({className = ''}) => {
                     }}
                     transition={{
                         type: 'spring',
-                        stiffness: 200,
-                        damping: 80,
+                        stiffness: 200, // 
+                        damping: 150, // 80 por defecto, se puede ajustar la velocidad
                     }}
                 />
 
